@@ -1,6 +1,6 @@
 # AI-Powered C++ Code Reviewer
 
-A tool that analyzes C++ code, detects common errors, suggests optimizations, and provides explanations using OpenAI's GPT models.
+A powerful AI-driven tool designed to analyze C++ source code, detect common errors, recommend performance improvements, and offer detailed explanations using OpenAI's GPT models.
 
 ## Features
 
@@ -15,12 +15,46 @@ A tool that analyzes C++ code, detects common errors, suggests optimizations, an
 - Python 3.6 or higher
 - OpenAI API key (set as environment variable `OPENAI_API_KEY`)
 
-## Installation
+##  Installation
 
-No special installation is needed beyond having Python and the OpenAI package:
+### 🖥️ Option 1:  Running Locally with Python Virtual Environment
+
+
+# Clone the repository
+```bash
+git clone https://github.com/yourusername/AI_Powered_Code_Reviewer.git
+cd AI_Powered_Code_Reviewer
+```
+# Create virtual environment (optional but recommended)
+```bash
+python -m venv venv
+source venv/bin/activate     # On Windows: venv\Scripts\activate
+```
+# Install required packages
+```bash
+pip install -r openai
+tqdm
+rich
+python-dotenv
+
+```
+## 🌐 Option 2: Run on Replit (Web IDE)
+1- Go to https://replit.com
+
+2- Create a new Python Repl
+
+3- Upload your project files or link GitHub repo
+
+4- Set your environment variable:
+
+ - Go to the 🔐 Secrets tab
+
+ - Add OPENAI_API_KEY and paste your key
+
+5-Run the script using the shell:
 
 ```bash
-pip install openai
+python cpp_code_reviewer.py -f test.cpp -v
 ```
 
 ## Usage
@@ -45,10 +79,12 @@ This will analyze `sample.cpp` and output the review results to the console, wit
 
 ## How It Works
 
-1. Pattern-based analysis: First pass uses regex patterns to identify common C++ issues
-2. AI-powered analysis: OpenAI's GPT model analyzes the full code to find additional issues
-3. Issue enhancement: Each detected issue is explained in detail with recommendations for fixes
-4. Results formatting: Issues are organized by severity and presented with code snippets
+
+1. Pattern-based analysis: First pass uses regex patterns to identify common C++ issues.
+2. AI-powered analysis: OpenAI's GPT model analyzes the full code to find additional issues.
+3. Sends code to GPT-4o for intelligent review and recommendations.
+4. Issue enhancement: Each detected issue is explained in detail with recommendations for fixes.
+5. Results formatting: Issues are organized by severity and presented with code snippets.
 
 ## Output Format
 
