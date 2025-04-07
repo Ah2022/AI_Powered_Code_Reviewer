@@ -57,9 +57,11 @@ python-dotenv
 python cpp_code_reviewer.py -f test.cpp -v
 ```
 
-## Usage
+## FlowChart
 
 <img src="AI-Powered Code Reviewer – System Architecture.png"/>
+
+## Usage
 
 ```bash
 python cpp_code_reviewer.py -f <cpp_file> [-o <output_file>] [-v]
