@@ -59,6 +59,8 @@ python cpp_code_reviewer.py -f test.cpp -v
 
 ## Usage
 
+<img src="AI-Powered Code Reviewer – System Architecture.png"/>
+
 ```bash
 python cpp_code_reviewer.py -f <cpp_file> [-o <output_file>] [-v]
 ```
